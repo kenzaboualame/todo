@@ -4,6 +4,7 @@ import 'package:newtotolist/NewTask.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:newtotolist/NewNote.dart';
+import 'package:dio/dio.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -22,6 +23,8 @@ class homePage extends StatefulWidget {
 }
 
 class _homePageState extends State<homePage> {
+  // la declaration de la fonction :
+
   String filterType = "today";
   DateTime today = new DateTime.now();
   String taskPop = "close";
@@ -42,6 +45,7 @@ class _homePageState extends State<homePage> {
   CalendarController ctrlr = new CalendarController();
   @override
   Widget build(BuildContext context) {
+    // getHttp();
     return Scaffold(
       body: Stack(
         children: [

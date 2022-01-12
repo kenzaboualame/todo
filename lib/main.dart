@@ -1,8 +1,19 @@
 import 'dart:async';
 import 'Onboarding.dart';
 import 'package:flutter/material.dart';
+import 'package:dio/dio.dart';
 
-void main() {
+void main() async {
+  try {
+    print(
+        "fkwebngkjbewkgjbewkjgbkewjbgkjwebgkjbwekgjbwkejgbkewjbgkjbwegkbewkjbgkwebgkb");
+    var response = await Dio().get('http://192.168.1.10:8080/api/taches/');
+    print(
+        "T********************************************************************* ");
+    print(response);
+  } catch (e) {
+    print(e);
+  }
   runApp(MyApp());
 }
 
@@ -24,6 +35,17 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  void getHttp() async {
+    try {
+      var response = await Dio().get('localhost:8080/api/taches/');
+      print(
+          "T********************************************************************* ");
+      print(response);
+    } catch (e) {
+      print(e);
+    }
+  }
+
   @override
   void initState() {
     // TODO: implement initState

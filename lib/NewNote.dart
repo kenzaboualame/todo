@@ -184,7 +184,7 @@ class _newNoteState extends State<newNote> {
                               color: Colors.grey.withOpacity(0.2),
                               child: TextField(
                                 decoration: InputDecoration(
-                                  hintText: "Date d'échéance",
+                                  hintText: "Etat",
                                   border: InputBorder.none,
                                 ),
                                 style: TextStyle(fontSize: 18),
